@@ -6,8 +6,8 @@ function App() {
 
     // Definir el states
 	const [ cantidad, guardarCantidad ] = useState(0),
-		  [ plazo, guardarPlazo ] = useState('');
-
+		  [ plazo, guardarPlazo ] 		= useState(''),
+		  [ total, guardarTotal ] 		= useState(0);
 
 	return (
 		<>
@@ -19,12 +19,17 @@ function App() {
 				<Formulario 
 					cantidad={ cantidad }
 					plazo={ plazo }
+					total={ total }
 					guardarCantidad={ guardarCantidad }
 					guardarPlazo={ guardarPlazo }
+					guardarTotal={ guardarTotal }
 				/>
+
+				<p>Total a Pagar: { total }</p>
 			</div>
 		</>
 	);
+
 }
 
 export default App;
