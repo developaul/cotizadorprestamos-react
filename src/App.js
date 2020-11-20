@@ -37,7 +37,6 @@ function App() {
 				<Formulario 
 					cantidad={ cantidad }
 					plazo={ plazo }
-					total={ total }
 					guardarCantidad={ guardarCantidad }
 					guardarPlazo={ guardarPlazo }
 					guardarTotal={ guardarTotal }
