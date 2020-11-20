@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
-import Header from './components/Header'
-import Formulario from './components/Formulario'
+import Header from './components/Header';
+import Formulario from './components/Formulario';
+import Mensaje from './components/Mensaje';
+import Resultado from './components/Resultado';
 
 function App() {
 
@@ -8,6 +10,8 @@ function App() {
 	const [ cantidad, guardarCantidad ] = useState(0),
 		  [ plazo, guardarPlazo ] 		= useState(''),
 		  [ total, guardarTotal ] 		= useState(0);
+
+	const componente = ( total === 0 ) ? <Mensaje /> : <Resultado />
 
 	return (
 		<>
@@ -25,7 +29,9 @@ function App() {
 					guardarTotal={ guardarTotal }
 				/>
 
-				<p>Total a Pagar: { total }</p>
+				<div className="mensajes">
+					{ componente }
+				</div>
 			</div>
 		</>
 	);
