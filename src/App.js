@@ -11,7 +11,13 @@ function App() {
 		  [ plazo, guardarPlazo ] 		= useState(''),
 		  [ total, guardarTotal ] 		= useState(0);
 
-	const componente = ( total === 0 ) ? <Mensaje /> : <Resultado />
+	const componente = ( total === 0 ) 
+						? <Mensaje /> 
+						: <Resultado
+							total={total}
+							plazo={plazo}
+							cantidad={cantidad}
+						/>
 
 	return (
 		<>
