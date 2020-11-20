@@ -6,7 +6,7 @@ function App() {
 
     // Definir el states
 	const [ cantidad, guardarCantidad ] = useState(0),
-		  [ plazo, guardarPlazo ] = useState(0);
+		  [ plazo, guardarPlazo ] = useState('');
 
 
 	return (
